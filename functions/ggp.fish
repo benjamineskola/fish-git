@@ -1,5 +1,5 @@
 function ggp --wraps git-push
-    if (count $argv >/dev/null) -gt 1
+    if test (count $argv) -gt 1
         git push origin $argv
     else
         if count $argv >/dev/null

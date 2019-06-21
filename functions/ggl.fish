@@ -1,5 +1,5 @@
 function ggl --wraps git-pull
-    if (count $argv >/dev/null) -gt 1
+    if test (count $argv) -gt 1
         git pull origin $argv
     else
         if count $argv >/dev/null
