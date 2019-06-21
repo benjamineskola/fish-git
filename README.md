@@ -20,3 +20,11 @@ fisher add benjamineskola/fish-git
 ```fish
 omf install https://github.com/benjamineskola/fish-git
 ```
+
+## Caveats
+
+1. I don't use all of these aliases regularly, and so I haven't tested to
+   ensure their behaviour matches the original.
+2. I'm new to writing Fish scripts, and so although the aliases are probably
+   fine, the functions might not be written in the most efficient or idiomatic
+   way, or even behave correctly.
