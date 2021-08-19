@@ -3,7 +3,7 @@
 # (sorted alphabetically)
 #
 
-alias g 'git'
+alias g git
 
 alias ga 'git add'
 alias gaa 'git add --all'
@@ -67,7 +67,7 @@ alias gfg 'git ls-files | grep'
 alias gg 'git gui citool'
 alias gga 'git gui citool --amend'
 
-alias ggpur 'ggu'
+alias ggpur ggu
 alias ggpull 'git pull origin (git_current_branch)'
 alias ggpush 'git push origin (git_current_branch)'
 
@@ -97,7 +97,7 @@ alias glods "git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgr
 alias glola "git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
 alias glog 'git log --oneline --decorate --graph'
 alias gloga 'git log --oneline --decorate --graph --all'
-alias glp "git_log_prettily"
+alias glp git_log_prettily
 
 alias gm 'git merge'
 alias gmom 'git merge origin/master'
@@ -147,7 +147,7 @@ alias gss 'git status -s'
 alias gst 'git status'
 
 # use the default stash push on git 2.13 and newer
-set _git_version (git --version | string match -r '[0-9.]+$' | string split .)
+set -l _git_version (git --version | string match -r '[0-9.]+$' | string split .)
 test $_git_version[2] -gt 12 \
     && alias gsta 'git stash push' \
     || alias gsta 'git stash save'
